@@ -1,0 +1,14 @@
+.image-container {
+  height: 250px; /* Set the desired height for the images */
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and fill the available space */
+}
+.with-background {
+  background-image: url("images/lunar.png");
+  background-size: cover;
+}
