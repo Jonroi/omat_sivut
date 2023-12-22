@@ -8,3 +8,8 @@
   height: 100%;
   object-fit: cover; /* Maintain aspect ratio and fill the available space */
 }
+/* Style for the highlighted text */
+.highlight {
+    background-color: yellow;
+    /* You can adjust the style as needed */
+}

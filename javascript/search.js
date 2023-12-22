@@ -1,16 +1,14 @@
-function search(event) {
-  event.preventDefault(); // Prevent the form from submitting and refreshing the page
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('searchInput').addEventListener('input', function () {
+        let searchValue = this.value.trim().toLowerCase();
+        let content = document.getElementById('content');
+        let regex = new RegExp(searchValue, 'gi');
+        let contentHTML = content.innerHTML;
 
-  // Get the search input value
-  const searchInput = document.querySelector('input[type="search"]');
-  const searchQuery = searchInput.value;
+        // Highlight matching text by wrapping it in a <span> with a specific class
+        let highlightedContent = contentHTML.replace(regex, match => `<span class="highlight">${match}</span>`);
+        
+        content.innerHTML = highlightedContent;
+    });
+});
 
-  // Perform the search functionality
-  const matchingWords = performSearch(searchQuery);
-  displaySearchResults(matchingWords);
-}
-
-function performSearch(query) {
-  const pageContent = document.documentElement.innerText;
-  const words = pageContent.split(/\s+/);
-}

@@ -6,7 +6,7 @@
 </head>
 
 <body>
-    <div class="card-group">
+    <div class="card-group mt-1">
         <div class="card">
             <div class="image-container">
                 <img src="images/card2.jpg" class="card-img-top" alt="...">

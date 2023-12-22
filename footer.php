@@ -1,14 +1,13 @@
 <!-- Footer -->
-<footer class="text-center text-lg-start bg-white text-muted">
-    <!-- Section: Social media -->
-    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+<footer class="text-center text-lg-start bg-white text-muted mt-3">
+    <section class="d-flex justify-content-center justify-content-lg-between pt-4 border-bottom">
 
     </section>
     <!-- Section: Social media -->
 
     <!-- Section: Links  -->
     <section class="">
-        <div class="container text-center text-md-start mt-5">
+        <div class="container text-center text-md-start">
             <!-- Grid row -->
             <div class="row mt-3">
                 <!-- Grid column -->

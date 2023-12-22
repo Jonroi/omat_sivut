@@ -1,5 +1,5 @@
 <?php
-// data.php - Assuming this file contains the database connection code (not provided)
+// Connect to the database
 require_once "data.php";
 
 // Handle form submission
@@ -44,11 +44,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["add-achievement"])) {
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<div class="row bg-light rounded text-dark pt-2 me-5 ms-5">
-    <div class="row header text-center text-white bg-info mt-5 p-1 rounded">
-        <h3>Courses Completed</h3>
-    </div>
-    <div class="container mt-3">
+
+<body>
+
+
+    <div class="container-fluid border 1px border-gray rounded mt-2">
+        <div class="row header text-center text-white bg-info m-2 rounded">
+            <h3>Courses Completed</h3>
+        </div>
+
         <div class="row">
             <!-- Form on the left -->
             <div class="col-md-4">
@@ -129,7 +133,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["add-achievement"])) {
                     </tbody>
                 </table>
             </div>
+        </div>
+    </div>
+    </div>
+    <script src="javascript/search.js"></script>
+</body>
 
-
-
-            <?php require_once 'footer.php'; ?>
+<?php require_once 'footer.php'; ?>

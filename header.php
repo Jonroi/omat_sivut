@@ -12,7 +12,6 @@
 
 <body class="me-5 ms-5 bg-light">
     <!-- NAVBAR -->
-
     <nav class="navbar text-align-center navbar-expand-lg p-5 rounded-bottom"
         style="background-image: url('images/lunar.png');background-size: cover;">
         <div class="container-fluid">
@@ -31,16 +30,11 @@
                 </ul>
                 <form class="d-flex">
                     <!-- Place search input and button to the right -->
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-info" type="submit">Search</button>
+                    <input id="searchInput" class="form-control me-2" type="search" placeholder="Search"
+                        aria-label="Search">
+                    <div id="content">
+                        <button class="btn btn-outline-info" type="submit">Search</button>
                 </form>
             </div>
         </div>
     </nav>
-
-    <div id="search-results"></div>
-
-    <script src="javascript/search.js"></script>
-</body>
-
-</html>
