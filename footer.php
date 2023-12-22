@@ -1,11 +1,5 @@
 <!-- Footer -->
-<footer class="text-center text-lg-start bg-white text-muted mt-3">
-    <section class="d-flex justify-content-center justify-content-lg-between pt-4 border-bottom">
-
-    </section>
-
-
-
+<footer class="text-center text-lg-start bg-white text-muted mt-2 border rounded">
     <section class="">
         <div class="container text-center text-md-start">
 

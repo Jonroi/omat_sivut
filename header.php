@@ -32,6 +32,11 @@
                         <a class="nav-link btn btn-outline-info text-white border border-white rounded ms-3"
                             href="#contact-section">CONTACT</a>
                     </li>
+                    <!-- WORKBOOK button -->
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-info text-white border border-white rounded ms-3"
+                            href="workbook.php">WORKBOOK</a>
+                    </li>
                 </ul>
                 <!-- Search input and button to the right -->
                 <form class="d-flex">
