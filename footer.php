@@ -3,79 +3,44 @@
     <section class="d-flex justify-content-center justify-content-lg-between pt-4 border-bottom">
 
     </section>
-    <!-- Section: Social media -->
 
-    <!-- Section: Links  -->
+
+
     <section class="">
         <div class="container text-center text-md-start">
-            <!-- Grid row -->
+
             <div class="row mt-3">
-                <!-- Grid column -->
-                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                    <!-- Content -->
-                    <h6 class="text-uppercase fw-bold mb-4">
-                        <i class="fas fa-gem me-3 text-secondary"></i>Company name
-                    </h6>
-                    <p>
-                        Here you can use rows and columns to organize your footer content. Lorem ipsum
-                        dolor sit amet, consectetur adipisicing elit.
-                    </p>
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                    <!-- Links -->
-                    <h6 class="text-uppercase fw-bold mb-4">
-                        Products
-                    </h6>
-                    <p>
-                        <a href="#!" class="text-reset">Angular</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">React</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">Vue</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">Laravel</a>
-                    </p>
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                    <!-- Links -->
-                    <h6 class="text-uppercase fw-bold mb-4">
-                        Useful links
-                    </h6>
-                    <p>
-                        <a href="#!" class="text-reset">Pricing</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">Settings</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">Orders</a>
-                    </p>
-                    <p>
-                        <a href="#!" class="text-reset">Help</a>
-                    </p>
-                </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                    <!-- Links -->
-                    <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-                    <p><i class="fas fa-home me-3 text-secondary"></i> New York, NY 10012, US</p>
-                    <p>
-                        <i class="fas fa-envelope me-3 text-secondary"></i>
-                        info@example.com
+                    <!--Contact Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        MEDIA
+                    </h6>
+                    <p><i class="fa-brands fa-github me-3"></i><a href="https://github.com/Jonroi">Github</a></p>
+
+                    <p><i class="fa-brands fa-linkedin me-3"></i><a
+                            href="https://www.linkedin.com/in/joni-roine/">Linkedin</a></p>
+
+                    <p><i class="fa-brands fa-reddit me-3"></i><a href="https://www.reddit.com/user/JoNro1">Reddit</a>
                     </p>
-                    <p><i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88</p>
-                    <p><i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89</p>
+                </div>
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+                    <section id="contact-section">
+                        <!-- scroll.js -->
+                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Uusimaa%2C+Vantaa%2C+Finland"
+                            target="_blank">
+                            <p><i class="fas fa-home me-3 text-secondary"></i> Vantaa, Uusimaa, Finland</p>
+                        </a>
+                        <p>
+                            <i class="fas fa-envelope me-3 text-secondary"></i><a
+                                href="mailto:email@example.com?subject=Subject%20Here&body=Message%20Body%20Here">joni.roine@outlook.com</a>
+
+                        </p>
+
+
+                        <p><i class="fas fa-phone me-3 text-secondary"></i> +358 453209411</p>
+                    </section>
                 </div>
                 <!-- Grid column -->
             </div>
@@ -84,9 +49,9 @@
     </section>
 
     <!-- Footer -->
-    <footer class="text-center text-lg-start bg-white text-muted custom-footer">
+    <footer class="text-center text-lg-start bg-white text-muted custom-footer ">
         <div class="text-center p-4">
-            © 2021 MDBootstrap.com
+            © 2023 JoniRoine
         </div>
     </footer>
 

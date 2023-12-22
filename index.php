@@ -35,19 +35,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["add-achievement"])) {
 <?php require_once 'header.php'; ?>
 <?php require_once 'cards.php'; ?>
 
-
-<!-- COURSE FORM -->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Joni Roine</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-
-
     <div class="container-fluid border 1px border-gray rounded mt-2">
         <div class="row header text-center text-white bg-info m-2 rounded">
             <h3>Courses Completed</h3>
@@ -87,56 +87,59 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["add-achievement"])) {
 
             <!-- Displayed data on the right -->
             <div class="col-md-8" style="max-height: 600px; overflow-y: auto;">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Course Name</th>
-                            <th>Part</th>
-                            <th>Exercises</th>
-                            <th>Projects</th>
-                            <th>Project Link</th>
-                            <th>Date</th>
-                        </tr>
-                    </thead>
+                <div class="course-container">
+                    <table class="table table-striped course-table">
+                        <thead>
+                            <tr>
+                                <th>Course Name</th>
+                                <th>Part</th>
+                                <th>Exercises</th>
+                                <th>Projects</th>
+                                <th>Project Link</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody class="course-table-body">
+                            <?php
+                            // Fetch data from the database
+                            $stmt = $pdo->prepare("SELECT * FROM courses");
+                            $stmt->execute();
+                            $courses = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-                    <tbody>
-                        <?php
-            // Fetch data from the database
-            $stmt = $pdo->prepare("SELECT * FROM courses");
-            $stmt->execute();
-            $courses = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                            foreach ($courses as $course) {
+                                echo '<tr>';
+                                echo '<td>' . $course['CourseName'] . '</td>';
+                                echo '<td>' . $course['Part'] . '</td>';
+                                echo '<td>' . $course['Exercises'] . '</td>';
+                                echo '<td>' . $course['Projects'] . '</td>';
+                                echo '<td>';
 
-            foreach ($courses as $course) {
-                echo '<tr>';
-                echo '<td>' . $course['CourseName'] . '</td>';
-                echo '<td>' . $course['Part'] . '</td>';
-                echo '<td>' . $course['Exercises'] . '</td>';
-                echo '<td>' . $course['Projects'] . '</td>';
-                echo '<td>';
-
-                // Check if there's a project link
-                if (!empty($course['Project Link'])) {
-                    // Displaying a link icon or text
-                    echo '<a href="' . $course['Project Link'] . '" target="_blank">';
-                    echo '<i class="fa fa-external-link" aria-hidden="true"></i>'; // Assuming you're using Font Awesome for icons
-                    // Or if you want to display a text like "Link"
-                    // echo 'Link';
-                    echo '</a>';
-                } else {
-                    echo 'N/A';
-                }
-                echo '</td>';
-                echo '<td>' . $course['Date'] . '</td>';
-                echo '</tr>';
-            }
-            ?>
-                    </tbody>
-                </table>
+                                // Check if there's a project link
+                                if (!empty($course['Project Link'])) {
+                                    // Displaying a link icon or text
+                                    echo '<a href="' . $course['Project Link'] . '" target="_blank">';
+                                    echo '<i class="fa fa-external-link" aria-hidden="true"></i>'; // Assuming you're using Font Awesome for icons
+                                    // Or if you want to display a text like "Link"
+                                    // echo 'Link';
+                                    echo '</a>';
+                                } else {
+                                    echo 'N/A';
+                                }
+                                echo '</td>';
+                                echo '<td>' . $course['Date'] . '</td>';
+                                echo '</tr>';
+                            }
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
-    </div>
+
     <script src="javascript/search.js"></script>
 </body>
+
+</html>
 
 <?php require_once 'footer.php'; ?>

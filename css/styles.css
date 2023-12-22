@@ -1,5 +1,5 @@
 .image-container {
-  height: 250px; /* Set the desired height for the images */
+  height: 250px;
   overflow: hidden;
 }
 
@@ -8,8 +8,12 @@
   height: 100%;
   object-fit: cover; /* Maintain aspect ratio and fill the available space */
 }
-/* Style for the highlighted text */
+
 .highlight {
-    background-color: yellow;
-    /* You can adjust the style as needed */
+    background-color: aqua;
+    font-weight: bold;
+}
+.navbar-nav .nav-item:nth-child(1) .nav-link:hover,
+.navbar-nav .nav-item:nth-child(3) .nav-link:hover {
+    background-color: aqua;
 }

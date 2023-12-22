@@ -22,19 +22,30 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <!-- Move the HOME button list item to the left -->
+                    <!-- HOME button -->
                     <li class="nav-item">
-                        <a class="nav-link active text-white border border-white rounded" aria-current="page"
+                        <a class="nav-link btn btn-outline-info text-white border border-white rounded"
                             href="index.php">HOME</a>
                     </li>
+                    <!-- CONTACT button -->
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-info text-white border border-white rounded ms-3"
+                            href="#contact-section">CONTACT</a>
+                    </li>
                 </ul>
+                <!-- Search input and button to the right -->
                 <form class="d-flex">
-                    <!-- Place search input and button to the right -->
                     <input id="searchInput" class="form-control me-2" type="search" placeholder="Search"
                         aria-label="Search">
                     <div id="content">
-                        <button class="btn btn-outline-info" type="submit">Search</button>
+                        <button class="btn btn-outline-info text-white border-white" type="submit">Search</button>
+                    </div>
                 </form>
             </div>
         </div>
     </nav>
+    <script src="javascript/search.js"></script>
+    <script src="js/contactScroll.js"></script>
+</body>
+
+</html>
