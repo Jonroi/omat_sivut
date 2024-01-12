@@ -14,7 +14,7 @@ require_once "cards.php";
 
 <body>
     <div class="ratio ratio-16x9 mt-2 border rounded">
-        <iframe src="https://www.youtube.com/embed/N7ZmPYaXoic" title="video" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/PfboK_HccW0" title="video" allowfullscreen></iframe>
     </div>
 </body>
 
