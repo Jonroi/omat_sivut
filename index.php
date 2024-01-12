@@ -9,11 +9,12 @@ require_once "cards.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
 </head>
 
 <body>
-    <div class="ratio ratio-16x9">
-        <iframe src="https://www.youtube.com/embed/66tfvFeALBQ" title="video" allowfullscreen></iframe>
+    <div class="ratio ratio-16x9 mt-2 border rounded">
+        <iframe src="https://www.youtube.com/embed/N7ZmPYaXoic" title="video" allowfullscreen></iframe>
     </div>
 </body>
 

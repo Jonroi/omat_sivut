@@ -2,36 +2,48 @@
 // Connect to the database
 require_once "data.php";
 
+// Define the correct password
+$correctPassword = "JoniRoine1";
+
 // Handle form submission
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["add-achievement"])) {
-    $courseName = $_POST["course-name"];
-    $part = $_POST["part"];
-    $exercises = $_POST["exercises"];
-    $projects = $_POST["projects"];
-    $projectLink = $_POST["project-link"];
-    $date = $_POST["date"];
+    // Check if the correct password is provided
+    $enteredPassword = $_POST["password"];
 
-    // Insert data into the database
-    $sql = "INSERT INTO courses (CourseName, Part, Exercises, Projects, `Project Link`, Date) 
-            VALUES (:courseName, :part, :exercises, :projects, :projectLink, :date)";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([
-        "courseName" => $courseName,
-        "part" => $part,
-        "exercises" => $exercises,
-        "projects" => $projects,
-        "projectLink" => $projectLink,
-        "date" => $date
-    ]);
+    if ($enteredPassword === $correctPassword) {
+        // Password is correct, proceed with data insertion
+        $courseName = $_POST["course-name"];
+        $part = $_POST["part"];
+        $exercises = $_POST["exercises"];
+        $projects = $_POST["projects"];
+        $projectLink = $_POST["project-link"];
+        $date = $_POST["date"];
 
-    // Display a JavaScript alert
-    echo '<script>alert("Data transferred successfully!");</script>';
-    
-    header("Location: index.php");
-    
-    exit(); // Ensure that the script stops here to avoid further execution
+        // Insert data into the database
+        $sql = "INSERT INTO courses (CourseName, Part, Exercises, Projects, `Project Link`, Date) 
+                VALUES (:courseName, :part, :exercises, :projects, :projectLink, :date)";
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            "courseName" => $courseName,
+            "part" => $part,
+            "exercises" => $exercises,
+            "projects" => $projects,
+            "projectLink" => $projectLink,
+            "date" => $date
+        ]);
+
+        // Display a JavaScript alert for successful data transfer
+        echo '<script>alert("Data transferred successfully!");</script>';
+        
+        header("Location: index.php");
+        exit(); // Ensure that the script stops here to avoid further execution
+    } else {
+        // Password is incorrect, display a popup message
+        echo '<script>alert("Wrong password. To add content, you need a password.");</script>';
+    }
 }
 ?>
+
 <?php require_once 'header.php'; ?>
 
 <!DOCTYPE html>
@@ -56,6 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["add-achievement"])) {
             <!-- Form on the left -->
             <div class="col-md-4">
                 <form method="POST" action="">
+
                     <div class="mb-3">
                         <label for="course-name" class="form-label">Course Name</label>
                         <input type="text" class="form-control" id="course-name" name="course-name" required>
@@ -79,6 +92,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST["add-achievement"])) {
                     <div class="mb-3">
                         <label for="date" class="form-label">Date</label>
                         <input type="date" class="form-control" id="date" name="date" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
                     </div>
                     <button type="submit" class="btn btn-info" name="add-achievement">Submit</button>
                 </form>
